@@ -8,9 +8,17 @@ async function getAllData(req,res){
 
 let getdata = `${process.env.API_LINK}`
 let newData = await axios.get(getdata)
-console.log(newData)
-
-res.send(newData.data)
+class Dataa{
+    constructor(language){
+        this.title=language.title;
+        this.imgUrl = language.imageUrl;
+    }
+}
+let newArr = newData.data.map(item=>{
+    return new Dataa(item)
+})
+console.log(newArr)
+res.send(newArr)
 
 }
 module.exports=getAllData
