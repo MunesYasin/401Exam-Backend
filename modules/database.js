@@ -1,12 +1,16 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose  = require('mongoose'); 
 
-const language = new Schema({
-    title : String ,
-    imageUrl :  String,
+const favorite = new mongoose.Schema({
+
+
+
+    titlee : String , 
+    img1 : String , 
+    email2 : String , 
+    
+
 
 })
 
-const languages = mongoose.model("language", language);
-
-module.exports = languages;
+const favorites = mongoose.model('favorite',favorite)
+module.exports=favorites

@@ -11,14 +11,14 @@ mongoose.connect(`${process.env.MONGO_SERVER_LINK}`)
 
 
 async   function updateeeeeee(req,res){
-    let title= req.query.title
+    let titlee= req.query.title
+   let email2 = req.query.emaill
+    let ids= req.query.id
+let img2 = req.query.img
+    console.log(ids)
+       await databasee.findByIdAndUpdate(ids,{titlee,img2},(error,updateddate)=>{
    
-    let id= req.query.dataID
-
-    console.log(id)
-       await databasee.findByIdAndUpdate(id,{title,id},(error,updateddate)=>{
-   
-      databasee.find({},function (error,data){
+      databasee.find({email2},function (error,data){
            if(error){
                console.log(error)
            }else{

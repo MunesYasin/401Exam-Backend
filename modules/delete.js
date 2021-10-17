@@ -12,8 +12,9 @@ mongoose.connect(`${process.env.MONGO_SERVER_LINK}`)
 
  async   function deleteeee(req,res){
 let dataid = req.query.dataID
+let email2 =req.query.emaill
    await databasee.deleteOne({_id:dataid})
-   databasee.find({},function (error,data){
+   databasee.find({email2},function (error,data){
        res.send(data)
    })
 
